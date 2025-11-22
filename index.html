@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA IT Sirajul Huda - </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body class="h-full bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center gap-3">
+    <img src="https://smaitsirajulhuda.ege.my.id/logo.png" 
+         alt="Logo SMA IT Sirajul Huda" 
+         class="h-10 w-10 object-contain">
+    <span class="text-2xl font-bold text-gray-800">SMA IT Sirajul Huda</span>
+</div>
+
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#beranda" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
+                        <a href="#tentang" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Tentang</a>
+                        <a href="#program" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                        <a href="#fasilitas" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Fasilitas</a>
+                        <a href="#kontak" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#beranda" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Beranda</a>
+                <a href="#tentang" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Tentang</a>
+                <a href="#program" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Program</a>
+                <a href="#fasilitas" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Fasilitas</a>
+                <a href="#kontak" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="hero-bg text-white pt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Selamat Datang di SMA IT Sirajul Huda</h1>
+                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"> Sekolah Islam berkualitas dan kompetitif yang dapat mewujudkan generasi yang shaleh, shalehah dan cerdas.</p>
+                    <div class="space-x-4">
+                 
+                        <a href="#kontak"
+   class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+    Sosial Media kami
+</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">TERAKREDITASI B</h2>
+                    
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto"> NPSN : 70006194</p>
+<!-- Tombol Visi Misi -->
+<div class="mt-8 flex justify-center">
+    <button
+        id="toggle-visimisi"
+        class="px-6 py-3 bg-[#764ba2] text-white font-semibold rounded-lg shadow-md 
+        hover:bg-[#667eea] focus:outline-none focus:ring-2 
+        focus:ring-[#764ba2] focus:ring-offset-2 focus:ring-offset-white transition">
+        Lihat Visi, Misi & Tujuan
+    </button>
+</div>
+
+<!-- Panel Visi Misi (awal disembunyikan) -->
+<div
+    id="visimisi-panel"
+    class="mt-8 max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-xl shadow-md p-6 text-left hidden">
+    
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Visi</h3>
+    <p class="text-gray-700 mb-6">
+        Menjadi Sekolah Islam berkualitas dan kompetitif yang dapat mewujudkan generasi yang shaleh,
+        shalehah dan cerdas.
+    </p>
+
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Misi</h3>
+    <ol class="list-decimal list-inside space-y-3 text-gray-700 mb-6">
+        <li>
+            Menyelenggarakan pendidikan Islam secara terpadu dan berkesinambungan guna membentuk
+            pribadi muslim yang kuat aqidah, taat ibadah dan berakhlakul karimah.
+        </li>
+        <li>
+            Melakukan pembinaan pada peserta didik secara terpadu dalam penguasaan IPTEK dan IMTAQ
+            melalui kegiatan intrakurikuler dan ekstrakurikuler.
+        </li>
+        <li>
+            Membekali peserta didik dengan ilmu dan berbagai kecakapan untuk dapat melanjutkan ke
+            jenjang yang lebih tinggi.
+        </li>
+        <li>
+            Melakukan pembinaan yang berkesinambungan dalam meningkatkan kualitas tenaga pendidik
+            sesuai perkembangan zaman meliputi wawasan, daya analisis, kreatif dan inovatif
+            berdasarkan nilai-nilai Islam.
+        </li>
+        <li>
+            Membentuk generasi muslim yang unggul dan berkarakter yang mampu mengaplikasikan
+            ilmunya untuk kemaslahatan umat.
+        </li>
+    </ol>
+
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Tujuan</h3>
+    <p class="text-gray-700">
+        Membina, membimbing, dan membentuk peserta didik agar memiliki kepribadian yang islami,
+        berpengetahuan luas, berkarakter, beriman, bertaqwa, berakhlakul karimah, berilmu, cakap
+        kreatif, mandiri dan bertanggung jawab.
+    </p>
+</div>
+
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center card-hover bg-gray-50 p-8 rounded-lg">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Pendidikan Berkualitas</h3>
+                        <p class="text-gray-600">Kurikulum nasional yang diperkaya dengan program pengembangan minat dan bakat siswa</p>
+                    </div>
+                    <div class="text-center card-hover bg-gray-50 p-8 rounded-lg">
+                        <div class="text-4xl mb-4">👥</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Tenaga Pengajar Profesional</h3>
+                        <p class="text-gray-600">Guru-guru berpengalaman dan berkompeten di bidangnya masing-masing</p>
+                    </div>
+                    <div class="text-center card-hover bg-gray-50 p-8 rounded-lg">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Prestasi Gemilang</h3>
+                        <p class="text-gray-600">Berbagai prestasi akademik dan non-akademik di tingkat regional dan nasional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="program" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Program Unggulan</h2>
+                    <p class="text-lg text-gray-600">Berbagai program yang dirancang untuk mengembangkan potensi siswa secara optimal</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="text-3xl mb-4">📚</div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">Program IPA</h3>
+                            <p class="text-gray-600 mb-4">Fokus pada mata pelajaran sains dengan laboratorium lengkap dan modern</p>
+                            <ul class="text-sm text-gray-500 space-y-1">
+                                <li>• Matematika Lanjut</li>
+                                <li>• Fisika & Kimia</li>
+                                <li>• Biologi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="text-3xl mb-4">🌍</div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">Program IPS</h3>
+                            <p class="text-gray-600 mb-4">Mengembangkan pemahaman sosial dan ekonomi dengan pendekatan kontekstual</p>
+                            <ul class="text-sm text-gray-500 space-y-1">
+                                <li>• Ekonomi & Akuntansi</li>
+                                <li>• Geografi & Sejarah</li>
+                                <li>• Sosiologi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="p-6">
+                            <div class="text-3xl mb-4">🎨</div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">Program Bahasa</h3>
+                            <p class="text-gray-600 mb-4">Mengasah kemampuan berbahasa dan sastra dengan beragam aktivitas kreatif</p>
+                            <ul class="text-sm text-gray-500 space-y-1">
+                                <li>• Bahasa Indonesia</li>
+                                <li>• Bahasa Inggris</li>
+                                <li>• Sastra & Budaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="fasilitas" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Fasilitas Sekolah</h2>
+                    <p class="text-lg text-gray-600">Fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang optimal</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-blue-50 rounded-lg card-hover">
+                        <div class="text-4xl mb-3">🔬</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Laboratorium</h3>
+                        <p class="text-sm text-gray-600">Lab Fisika, Kimia, Biologi, dan Komputer</p>
+                    </div>
+                    <div class="text-center p-6 bg-green-50 rounded-lg card-hover">
+                        <div class="text-4xl mb-3">📖</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Perpustakaan</h3>
+                        <p class="text-sm text-gray-600">Koleksi buku lengkap dan ruang baca nyaman</p>
+                    </div>
+                    <div class="text-center p-6 bg-yellow-50 rounded-lg card-hover">
+                        <div class="text-4xl mb-3">⚽</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Lapangan Olahraga</h3>
+                        <p class="text-sm text-gray-600">Lapangan voli, dan sepak bola</p>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg card-hover">
+                        <div class="text-4xl mb-3">🎭</div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Aula Serbaguna</h3>
+                        <p class="text-sm text-gray-600">Untuk kegiatan seni dan acara sekolah</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        
+                  <!-- Contact / Sosial Media Section -->
+        <section id="kontak" class="py-20 bg-gray-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Sosial Media Kami</h2>
+                    <p class="text-lg text-gray-300">
+                        Silakan pilih salah satu platform di bawah ini untuk terhubung langsung dengan admin sekolah.
+                    </p>
+                </div>
+<div class="max-w-4xl mx-auto mt-16">
+    <!-- Card Maps langsung jadi <a>, TANPA absolute -->
+    <a href="https://www.google.com/maps?q=SMA+IT+Sirajul+Huda+Pelaihari" 
+       target="_blank"
+       class="block bg-gray-700 hover:bg-gray-600 transition duration-300 rounded-xl p-8 text-center card-hover">
+        <div class="text-4xl mb-3">📍</div>
+        <h3 class="text-xl font-semibold mb-2">Buka di Google Maps</h3>
+        <p class="text-gray-300 text-sm">Klik untuk melihat lokasi SMA IT Sirajul Huda</p>
+    </a>
+
+    <p class="text-center text-gray-300 mt-8 max-w-xl mx-auto">
+        Jl. Sirajul Huda Bukit Sabat Matah<br>
+        Kelurahan Karang Taruna, Kecamatan Pelaihari<br>
+        Kabupaten Tanah Laut, Kalimantan Selatan
+    </p>
+</div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/smait_sirajulhuda" target="_blank"
+                       class="bg-gray-700 hover:bg-gray-600 transition duration-300 rounded-xl p-8 text-center card-hover block">
+                        <div class="text-4xl mb-3">📸</div>
+                        <h3 class="text-xl font-semibold mb-2">Instagram</h3>
+                        <p class="text-gray-300 text-sm">Follow akun resmi sekolah di Instagram.</p>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@smait_sirajulhuda?" target="_blank"
+                       class="bg-gray-700 hover:bg-gray-600 transition duration-300 rounded-xl p-8 text-center card-hover block">
+                        <div class="text-4xl mb-3">🎵</div>
+                        <h3 class="text-xl font-semibold mb-2">TikTok</h3>
+                        <p class="text-gray-300 text-sm">Lihat video kegiatan dan aktivitas sekolah.</p>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/6285117485630" target="_blank"
+                       class="bg-gray-700 hover:bg-gray-600 transition duration-300 rounded-xl p-8 text-center card-hover block">
+                        <div class="text-4xl mb-3">💬</div>
+                        <h3 class="text-xl font-semibold mb-2">WhatsApp</h3>
+                        <p class="text-gray-300 text-sm">Chat langsung admin sekolah melalui WhatsApp.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">🏫 SMA IT Sirajul Huda</h3>
+                <p class="text-gray-400 mb-4">Membentuk Generasi Unggul untuk Masa Depan Indonesia</p>
+ 
+                <div class="mt-6 pt-6 border-t border-gray-800">
+                    <p>&copy; <span id="year"></span> SMA IT Sirajul Huda.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            const navHeight = 64; // Height of fixed navigation
+            const elementPosition = element.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add click handlers to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const messageDiv = document.getElementById('form-message');
+            
+            // Simulate form submission
+            messageDiv.className = 'mt-4 p-4 rounded-lg bg-green-600 text-white';
+            messageDiv.textContent = 'Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.';
+            messageDiv.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Add active navigation highlighting on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['beranda', 'tentang', 'program', 'fasilitas', 'kontak'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    current = section;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99464042f778f8cc',t:'MTc2MTQ0Mjg4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>
+           // Toggle Visi Misi
+        const toggleVisiMisiBtn = document.getElementById('toggle-visimisi');
+        const visiMisiPanel = document.getElementById('visimisi-panel');
+
+        if (toggleVisiMisiBtn && visiMisiPanel) {
+            toggleVisiMisiBtn.addEventListener('click', () => {
+                visiMisiPanel.classList.toggle('hidden');
+
+                if (!visiMisiPanel.classList.contains('hidden')) {
+                    visiMisiPanel.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+
+        // Tahun otomatis di footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</script>
+</body>
+</html>
+
